@@ -1,0 +1,128 @@
+
+<nav class="navbar navbar-expand-lg m-2">
+    <a class="navbar-brand px-2 shadow " >
+        <svg xmlns="http://www.w3.org/2000/svg"  (click)="back()" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+          </svg>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+ 
+         <ng-container >
+          <li class="nav-item m-3">
+            <h1>LOGO</h1>
+          </li>
+         </ng-container>
+        
+      </ul>
+    </div>
+  </nav>
+
+<div class="imgCarousel center mt-4  mb-4">
+    <div class="carsImgs">
+      <!-- Left Arrow -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        (click)="previousGroup()"
+        width="32"
+        height="32"
+        fill="currentColor"
+        class="bi bi-caret-left"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"
+        />
+      </svg>
+  
+      <!-- Image Group -->
+      <div class="image-group">
+        <img
+          *ngFor="let img of currentGroup"
+          [src]="img"
+          alt="Car Image"
+          class="car-image"
+        />
+      </div>
+  
+      <!-- Right Arrow -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        (click)="nextGroup()"
+        width="32"
+        height="32"
+        fill="currentColor"
+        class="bi bi-caret-right"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div class="carInfo container ">
+    <div class="row info  m-4 p-4">
+      <!-- Model Name -->
+      <div class="col-12 d-flex justify-content-center">
+        <h2>Model Name:</h2>
+        <h2>Ferrari</h2>
+      </div>
+  
+      <!-- Multiple Car Photos -->
+      <div class="col-12">
+        <h2>Multiple Car Photos:</h2>
+        <div class="d-flex flex-wrap gap-3">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+  
+      <!-- Bill Photo -->
+      <div class="col-12">
+        <h2>Bill Photo:</h2>
+        <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+      </div>
+  
+      <!-- Polish Expenditure Photos -->
+      <div class="col-12">
+        <h2>Polish Expenditure Photos:</h2>
+        <div class="d-flex flex-wrap gap-3">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+          <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+  
+      <!-- Selling Photo -->
+      <div class="col-12">
+        <h2>Selling Photo:</h2>
+        <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+      </div>
+  
+      <!-- Cheque Photos -->
+      <div class="col-12">
+        <h2>Cheque Front Side Photo:</h2>
+        <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+      </div>
+      <div class="col-12">
+        <h2>Cheque Front Side Photo:</h2>
+        <img src=".../../../../../../assets/imgs/Ferrari-Car-Wallpaper.jpg" alt="" class="img-fluid">
+      </div>
+      <div class="d-flex justify-content-center m-3">
+        <button class="btn btn-primary">Download</button>
+      </div>
+    </div>
+
+ 
+  </div>
+  

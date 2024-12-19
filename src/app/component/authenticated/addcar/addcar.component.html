@@ -1,0 +1,92 @@
+<div class="logo center m-2">
+    <!-- <img src="" alt=""> -->
+     <h1>LOGO</h1>
+</div>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 w-50">
+      <h3 class="text-center mb-4">Add Car</h3>
+      <form [formGroup]="photoForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="modelName" class="form-label">Model Name</label>
+          <input
+            type="text"
+            id="modelName"
+            class="form-control"
+            formControlName="modelName"
+            placeholder="Enter model name"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Multiple Car Photos</label>
+          <input
+            type="file"
+            class="form-control"
+            formControlName="multiplePhotos"
+            multiple
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Bill Photo</label>
+          <input type="file" class="form-control" formControlName="billPhoto" />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Polish Expenditure Photos (Max 4)</label>
+          <input
+            type="file"
+            class="form-control"
+            formControlName="polishPhotos"
+            multiple
+            [attr.max]="4"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Selling Photo</label>
+          <input
+            type="file"
+            class="form-control"
+            formControlName="sellingPhoto"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Cheque Front Side Photo</label>
+          <input
+            type="file"
+            class="form-control"
+            formControlName="chequeFront"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Cheque Back Side Photo</label>
+          <input
+            type="file"
+            class="form-control"
+            formControlName="chequeBack"
+          />
+        </div>
+  
+        <div class="center">
+            <button
+          type="submit"
+          class="btn submitBtn  w-50 "
+          [disabled]="!photoForm.valid"
+        >
+          Submit
+        </button>
+        <button
+        type="reset"
+        class="btn btn-primary w-50 "
+      
+      >
+        Reset
+      </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

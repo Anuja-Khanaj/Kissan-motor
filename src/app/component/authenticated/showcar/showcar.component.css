@@ -1,0 +1,55 @@
+.navbar-brand{
+    /* padding: 0px; */
+    background-color: white;
+    border-radius: 50%;
+}
+
+.navbar-brand:hover {
+    border-radius: 1px white solid;
+    background-color: var(--bg--color);
+    cursor: pointer;
+}
+
+.imgCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carsImgs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .image-group {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .carsImgs svg {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    color: #555;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .carsImgs svg:hover {
+    transform: scale(1.2);
+  }
+  
+  img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .info{
+    background-color: white;
+    border-radius: 1rem;
+    
+  }
+  

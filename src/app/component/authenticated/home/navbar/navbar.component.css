@@ -1,0 +1,19 @@
+.nav-item{
+    background: var(--btn-color);
+}
+
+.navbar{
+    background-color: var(--sec--color);
+    border-radius: 0.2rem;
+}
+a{
+    color: white;
+}
+
+li{
+    border-radius: 3px ;
+    
+}
+.btn{
+    color: white;  
+}

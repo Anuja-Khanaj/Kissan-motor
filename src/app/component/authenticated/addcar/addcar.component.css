@@ -1,0 +1,14 @@
+.addcarForm{
+    background-color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width:  50%;
+}
+form{
+    width: 100%;
+}
+
+.submitBtn{
+    background-color: var(--btn-color);
+    color: white;
+}

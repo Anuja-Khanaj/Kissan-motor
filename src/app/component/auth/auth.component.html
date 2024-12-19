@@ -1,0 +1,55 @@
+<div class="loginForm " style="background: var(--bg-color);">
+   <div class="form center">
+    
+    <form class="" [formGroup]="reactiveforms" (ngSubmit)="OnformSubmitted()">
+      <h1 class="logo text-center">KISSAN MOTOR</h1><br><br>
+        <h2 class="text-center">Login
+          <div class="line"></div>
+        </h2> <br>
+       
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-3 col-form-label" >Email</label>
+            <div class="col-sm-9">
+              <input type="email"  class="form-control" id="inputEmail" name="email" formControlName = "email" >
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>          
+                </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" id="inputPassword" formControlName = "password">
+              <small *ngIf="reactiveforms.get('password').invalid"> Invalid Password</small> 
+             </div>
+          </div>
+          <br>
+          <button class="login btn" type="submit">Login</button>
+    </form>
+   </div>
+</div>
+
+ <!-- <div class=" container d-flex justify-content-center  " style="align-items: center; margin-bottom: 6.5rem;">
+  <div class="left p-2" >
+      <h1 class="mb-4" style="border-bottom: solid black 2px;">Login Here to Access Service</h1>
+      <form [formGroup]="reactiveforms" (ngSubmit)="OnformSubmitted()" >
+          <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" >
+          </div>
+          <button type="submit" class="btn btn-outline-primary my-3" >Submit</button>
+          <br>
+          <small>Already have account ?</small> <a routerLink="/Signup"> Signup</a>
+      </form>
+  </div>
+  <div class="right p-2"  >
+      <img src="../../assets/images.jpg" alt="">
+  </div>
+</div>  -->
+
+
