@@ -14,6 +14,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { SerachPipe } from 'src/pipes/serach.pipe';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ShowcarComponent,
     NavbarComponent,
-    SerachComponent,
-    
+  SerachComponent,
+    SerachPipe
   ],
   imports: [
     BrowserModule,

@@ -3,45 +3,106 @@
      <h1>LOGO</h1>
 </div>
 <div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow-lg p-4 w-50">
-      <h3 class="text-center mb-4">Add Car</h3>
-      <form [formGroup]="photoForm" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-          <label for="modelName" class="form-label">Model Name</label>
-          <input
-            type="text"
-            id="modelName"
-            class="form-control"
-            formControlName="modelName"
-            placeholder="Enter model name"
-          />
-        </div>
+  <div class="card shadow-lg p-4 w-50">
+    <h3 class="text-center mb-4">Add Car</h3>
+    <form [formGroup]="photoForm" (ngSubmit)="onSubmit()">
+      <!-- Model Name -->
+      <div class="mb-3">
+        <label for="modelName" class="form-label">Model Name</label>
+        <input
+          type="text"
+          id="modelName"
+          class="form-control"
+          formControlName="modelName"
+          placeholder="Enter model name"
+        />
+      </div>
   
-        <div class="mb-3">
-          <label class="form-label">Multiple Car Photos</label>
-          <input
-            type="file"
-            class="form-control"
-            formControlName="multiplePhotos"
-            multiple
-          />
+      <!-- Multiple Car Photos -->
+      <div class="mb-3">
+        <label class="form-label">Multiple Car Photos (Max 4)</label>
+        <div formArrayName="multiplePhotos">
+          <div
+            class="d-flex mb-2"
+            *ngFor="let field of multiplePhotos.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <input
+              type="file"
+              class="form-control me-2"
+              formControlName="photo"
+            />
+            <button
+              type="button"
+              class="btn btn-success me-2"
+              (click)="addPhoto()"
+              [disabled]="multiplePhotos.length >= 4"
+            >
+              Add
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="removePhoto(i)"
+              *ngIf="i > 0"
+            >
+              Remove
+            </button>
+          </div>
         </div>
+      </div>
   
-        <div class="mb-3">
-          <label class="form-label">Bill Photo</label>
-          <input type="file" class="form-control" formControlName="billPhoto" />
+      <!-- Polish Photos -->
+      <div class="mb-3">
+        <label class="form-label">Polish Photos (Max 4)</label>
+        <div formArrayName="polishPhotos">
+          <div
+            class="d-flex mb-2"
+            *ngFor="let field of polishPhotos.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <input
+              type="file"
+              class="form-control me-2"
+              formControlName="photo"
+            />
+            <button
+              type="button"
+              class="btn btn-success me-2"
+              (click)="addPolishPhoto()"
+              [disabled]="polishPhotos.length >= 4"
+            >
+              Add
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="removePolishPhoto(i)"
+              *ngIf="i > 0"
+            >
+              Remove
+            </button>
+          </div>
         </div>
+      </div>
   
-        <div class="mb-3">
-          <label class="form-label">Polish Expenditure Photos (Max 4)</label>
-          <input
-            type="file"
-            class="form-control"
-            formControlName="polishPhotos"
-            multiple
-            [attr.max]="4"
-          />
-        </div>
+      <!-- Other Fields -->
+      <div class="mb-3">
+        <label class="form-label">Bill Photo</label>
+        <input type="file" class="form-control" formControlName="billPhoto" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Selling Photo</label>
+        <input type="file" class="form-control" formControlName="sellingPhoto" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cheque Front Side Photo</label>
+        <input type="file" class="form-control" formControlName="chequeFront" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cheque Back Side Photo</label>
+        <input type="file" class="form-control" formControlName="chequeBack" />
+      </div>
   
         <div class="mb-3">
           <label class="form-label">Selling Photo</label>
