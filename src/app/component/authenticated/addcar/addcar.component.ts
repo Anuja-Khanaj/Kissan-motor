@@ -46,11 +46,9 @@ export class AddcarComponent {
 
   // Add photo to multiplePhotos array
   addPhoto(): void {
-    if (this.multiplePhotos.length < 4) {
+
       this.multiplePhotos.push(this.createPhotoField());
-    } else {
-      alert('You can add a maximum of 4 photos.');
-    }
+    
   }
 
   // Remove photo from multiplePhotos array
